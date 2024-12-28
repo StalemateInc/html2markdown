@@ -27,7 +27,7 @@ module HTML2Markdown
 
     # wrap node with markdown
     def wrap_node(node,contents=nil)
-      result = ''
+      result = ''.dup
       contents.strip! unless contents==nil
       # check if there is a custom parse exist
       if respond_to? "parse_#{node.name}"
